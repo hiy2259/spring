@@ -4,7 +4,17 @@
 	xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
-
+	<!-- Mybatis-Spring 설정 -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation" value="classpath:config/SqlMapConfig.xml" />
+		<property name="mapperLocations">
+			<list>
+				<value>classpath:config/User.xml</value>
+				<value>classpath:config/Student.xml</value>
+			</list>
+		</property>
+	</bean>
 	<!-- DataSource 설정 -->
 	<bean id="dataSource"
 	      class="org.apache.commons.dbcp2.BasicDataSource"
