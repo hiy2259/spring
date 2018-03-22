@@ -23,5 +23,12 @@
 
 ### AOP
 * Aspect = Advice + Point Cut
-* 부가기능의 클래스 = Advice 클래스
-* Advice를 적용할 target(Dao 클래스, Service 클래스)을 선택하는 식(정규표현식) -> Point Cut
+* 부가기능의 클래스, 공통 기능 = Advice 클래스
+* Advice를 적용할 target(Dao 클래스, Service 클래스, 메서드등)을 선택하는 식(정규표현식) -> Point Cut
+* spring에서 Aspect를 Advisor라고 함.
+* 타켓이랑 advice를 합치는 과정을 Weaving 이라고 한다.
+* 타켓과 어드바이스 합쳐지는 위치를 조인 포인트라고 한다.
+
+### AspectJ
+#### proceedingJoinPoint
+* Proceed -> 타갯이 실행 할 수 있게 하는 명령을 하는 메소드
