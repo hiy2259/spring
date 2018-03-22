@@ -30,7 +30,7 @@ public class Hello {
 	}
 
 	public void setPrinter(Printer printer) {
-		System.out.println("setPrinter() »£√‚µ   " + printer);
+		System.out.println("setPrinter() »£√‚µ   " + printer.toString());
 		this.printer = printer;
 	}
 
