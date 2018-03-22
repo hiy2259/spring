@@ -20,3 +20,8 @@
 #### 참고사항
 * JDK 1.9 버전에서 JAXB 라이브러리가 누락되어서 따로 MAVEN 에서 찾아서 따로 추가해야 함.
 * MyBatis Spring 는 내부적으로 spring jdbc를 사용하기 때문에 같이 설치 해줘야 함.
+
+### AOP
+* Aspect = Advice + Point Cut
+* 부가기능의 클래스 = Advice 클래스
+* Advice를 적용할 target(Dao 클래스, Service 클래스)을 선택하는 식(정규표현식) -> Point Cut
