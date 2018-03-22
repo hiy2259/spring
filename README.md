@@ -17,4 +17,6 @@
 * VO(Value Object) 클래스 정보
 * log4j2(SQL logging)
 #### JDK 1.9 버전
-* JAXB 라이브러리 MAVEN 에서 찾아서 따로 추가해야 함.
+#### 참고사항
+* JDK 1.9 버전에서 JAXB 라이브러리가 누락되어서 따로 MAVEN 에서 찾아서 따로 추가해야 함.
+* MyBatis Spring 는 내부적으로 spring jdbc를 사용하기 때문에 같이 설치 해줘야 함.
