@@ -18,6 +18,7 @@ public class DeptVO {
 	}
 
 	public Integer getDeptid() {
+		System.out.println("getDeptid");
 		return deptid;
 	}
 

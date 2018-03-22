@@ -24,6 +24,7 @@ public class StudentVO {
 	}
 
 	public Integer getId() {
+		System.out.println("getId");
 		return id;
 	}
 
@@ -32,6 +33,7 @@ public class StudentVO {
 	}
 
 	public String getName() {
+		System.out.println("getName");
 		return name;
 	}
 
@@ -40,6 +42,7 @@ public class StudentVO {
 	}
 
 	public Integer getAge() {
+		System.out.println("getAge");
 		return age;
 	}
 
@@ -48,6 +51,7 @@ public class StudentVO {
 	}
 
 	public String getGrade() {
+		System.out.println("getGrade");
 		return grade;
 	}
 
@@ -64,6 +68,7 @@ public class StudentVO {
 	}
 
 	public DeptVO getDept() {
+		System.out.println("getDept");
 		return dept;
 	}
 
