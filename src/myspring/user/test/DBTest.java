@@ -71,7 +71,7 @@ public class DBTest {
 		System.out.println(user);
 		assertThat(user.getName(), is("ȫ�浿"));
 		for(UserVO userVo: userService.getUserList()) {
-			System.out.println(userVo);
+//			System.out.println(userVo);
 		}
 	}
 }
