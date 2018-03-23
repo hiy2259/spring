@@ -7,7 +7,7 @@ import myspring.user.vo.UserVO;
 
 public interface UserService {
 	
-	public void insertUser(UserVO user);
+	public Boolean insertUser(UserVO user);
 
 	public List<UserVO> getUserList();
 

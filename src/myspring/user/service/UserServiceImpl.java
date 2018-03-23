@@ -16,8 +16,14 @@ public class UserServiceImpl implements UserService {
 	UserDao userdao;
 
 	@Override
-	public void insertUser(UserVO user) {
-		userdao.insert(user);
+	public Boolean insertUser(UserVO user) {
+		int cnt = userdao.insert(user);
+
+		if (cnt == 1) {
+			return true;
+		}
+
+		return false;
 	}
 
 	public List<UserVO> getUserList() {

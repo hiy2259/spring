@@ -24,9 +24,10 @@ public class UserDaoImpl implements UserDao {
 		return userList;
 	}
 	
-	public void insert(UserVO user) {
-		session.update("userNS.insertUser", user);
+	public int insert(UserVO user) {
+		int cnt = session.update("userNS.insertUser", user);
 		System.out.println("µî·ÏµÈ Record UserId=" + user.getUserId() + " Name=" + user.getName());
+		return cnt;
 	}
 
 	@Override

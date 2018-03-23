@@ -2,6 +2,7 @@ package myspring.user.test;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertTrue;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -76,9 +77,16 @@ public class DBTest {
 	}
 	
 	@Test
+	public void insert() {
+		assertTrue(userService.insertUser(new UserVO("yongsnim", "yongs", "남", "서울")));
+		UserVO user = userService.getUser("yongs");
+		System.out.println(user);
+	}
+	
+	@Test @Ignore
 	public void update() {
-		userService.updateUser(new UserVO("yongsnim", "yongs2", "남", "서울"));
-		UserVO user = userService.getUser("yongs2");
+		userService.updateUser(new UserVO("yongsnim", "yongs", "남", "서울"));
+		UserVO user = userService.getUser("yongs");
 		System.out.println(user);
 	}
 }

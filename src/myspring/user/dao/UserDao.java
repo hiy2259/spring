@@ -6,7 +6,7 @@ import java.util.Map;
 import myspring.user.vo.UserVO;
 
 public interface UserDao {
-	public void insert(UserVO user);
+	public int insert(UserVO user);
 
 	public List<UserVO> readAll();
 

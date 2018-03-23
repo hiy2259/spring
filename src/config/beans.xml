@@ -19,7 +19,7 @@
 		<tx:attributes>
 			<tx:method name="get*" read-only="true" />
 			<tx:method name="updateUser" propagation="REQUIRED" />
-			<tx:method name="update" propagation="NEVER" />
+			<tx:method name="update" propagation="REQUIRED" />
 		</tx:attributes>
 	</tx:advice>
 	<!-- 3. 설정한 Tx Advice를 적용할 Point Cut 설정 -->
