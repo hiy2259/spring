@@ -17,6 +17,7 @@ public class PerformanceTraceAdvice {
 			// 타겟의 메서드 호출
 			Object result = joinPoint.proceed();
 			return result;
+//			return new Object();
 		} finally {
 			// 타겟의 메서드가 호출된 후의 시간
 			long finish = System.currentTimeMillis();

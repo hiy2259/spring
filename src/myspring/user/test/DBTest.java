@@ -58,8 +58,7 @@ public class DBTest {
 		}
 	}
 
-	@Test
-	@Ignore
+	@Test @Ignore
 	public void student() {
 		StudentVO student = new StudentVO(1018, "yongs", 34, "1학년", "주간", new DeptVO(20));
 		int cnt = sqlSession.update("studentNS.insertStudent", student);
@@ -71,5 +70,8 @@ public class DBTest {
 		UserVO user = userService.getUser("gildong");
 		System.out.println(user);
 		assertThat(user.getName(), is("홍길동"));
+		for(UserVO userVo: userService.getUserList()) {
+			System.out.println(userVo);
+		}
 	}
 }

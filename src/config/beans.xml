@@ -12,7 +12,7 @@
 	<bean id="ptAdvice" class="myspring.aop.xml.PerformanceTraceAdvice" />
 	<aop:config>
 		<aop:aspect ref="ptAdvice">
-			<aop:around method="trace" pointcut="execution(public * myspring.user..*(..))" />
+			<aop:around method="trace" pointcut="execution(public * myspring.user.dao..*(..))" />
 		</aop:aspect>
 	</aop:config>
 
