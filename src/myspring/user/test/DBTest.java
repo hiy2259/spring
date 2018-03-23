@@ -65,13 +65,20 @@ public class DBTest {
 		System.out.println("등록된 건수 " + cnt);
 	}
 
-	@Test
+	@Test @Ignore
 	public void service() {
 		UserVO user = userService.getUser("gildong");
 		System.out.println(user);
 		assertThat(user.getName(), is("홍길동"));
 		for(UserVO userVo: userService.getUserList()) {
-//			System.out.println(userVo);
+			System.out.println(userVo);
 		}
+	}
+	
+	@Test
+	public void update() {
+		userService.updateUser(new UserVO("yongsnim", "yongs2", "남", "서울"));
+		UserVO user = userService.getUser("yongs2");
+		System.out.println(user);
 	}
 }
