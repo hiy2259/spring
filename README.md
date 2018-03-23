@@ -8,6 +8,7 @@
     * AspectJ포인트컷표현식.pdf
     * MyBatis-3-User-Guide_ko.pdf
     * SpringWebPrj.zip
+
 ### Mybatis
 #### mapper.xml
 * SQL 문 포함
@@ -32,3 +33,15 @@
 ### AspectJ
 #### proceedingJoinPoint
 * Proceed -> 타갯이 실행 할 수 있게 하는 명령을 하는 메소드
+
+### Log4j
+#### Log Level 제공
+* debug, info, warn, error, fatal)
+#### Log4j의 구성 요소
+* logger + appender(console, file, mail 등등등) + formatter
+
+### EJB
+#### BMT (Bean managed Transaction)
+* 개발자가 직접 관리
+#### CMT (Containter Managed Transation) -> 스프링에서 사용
+* 컨테이너가 직접 관리
