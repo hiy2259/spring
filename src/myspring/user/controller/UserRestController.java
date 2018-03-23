@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import myspring.user.service.UserService;
 import myspring.user.vo.UserVO;
+import myspring.user.vo.UserVOXML;
 
 @RestController
 public class UserRestController {
@@ -57,5 +58,12 @@ public class UserRestController {
 		 } else {
 			 return Boolean.FALSE;
 		 }
+	 }
+	 
+	 @RequestMapping(value = "/usersXml", method = RequestMethod.GET)
+	 @ResponseBody
+	 public UserVOXML getUserListXml() {
+		 UserVOXML xml = new UserVOXML("success", userService.getUserList());
+		 return xml;
 	 }
 }
