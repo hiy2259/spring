@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
+
+	<!-- url 중복 문제 해결 -> server에 web.xml에 url과 충돌을 일으킴 -->
+	<mvc:default-servlet-handler/>
+
+	<!-- JSON read/write 이외에 많은 일을 한다. -->
+	<mvc:annotation-driven />
+</beans>
